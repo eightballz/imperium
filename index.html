@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imperium - Home</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #000;
+            color: #fff;
+            scroll-behavior: smooth;
+        }
+        h1, h2, h3, h4, h5, h6, 
+        .font-heading,
+        .nav-link,
+        .server-stats,
+        .feature-card h3,
+        .ip-box .font-heading,
+        footer h3 {
+            font-family: 'Lexend', sans-serif;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+        .glow-hover:hover {
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+            transform: translateY(-2px);
+        }
+        .nav-link::after {
+            content: '';
+            display: block;
+            width: 0;
+            height: 2px;
+            background: white;
+            transition: width 0.3s;
+        }
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        .server-stats {
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0% { opacity: 0.8; }
+            50% { opacity: 1; }
+            100% { opacity: 0.8; }
+        }
+        .hero-gradient {
+            background: radial-gradient(circle at center, rgba(10, 10, 40, 0.8) 0%, rgba(0, 0, 0, 1) 70%);
+        }
+        .feature-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 10px 25px rgba(255, 255, 255, 0.1);
+        }
+        .join-section {
+            background: linear-gradient(135deg, rgba(20, 20, 50, 0.8) 0%, rgba(0, 0, 0, 0.9) 100%);
+        }
+        .ip-box {
+            background: linear-gradient(90deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.1) 50%, rgba(255,255,255,0.05) 100%);
+        }
+        .font-heading {
+            font-family: 'Lexend', sans-serif;
+        }
+        .nav-link {
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col">
+    <!-- Navigation -->
+    <nav class="bg-black/80 backdrop-blur-sm border-b border-white/10 py-4 sticky top-0 z-50">
+        <div class="container mx-auto px-4 flex justify-between items-center">
+            <div class="text-3xl font-heading tracking-tight">
+                IMPERIUM
+            </div>
+            <div class="hidden md:flex space-x-8">
+                <a href="#home" class="nav-link text-xl hover:text-white transition-colors">HOME</a>
+                <a href="#about" class="nav-link text-xl hover:text-white transition-colors">FEATURES</a>
+                <a href="#rules" class="nav-link text-xl hover:text-white transition-colors">GUIDELINES</a>
+                <a href="#join" class="nav-link text-xl hover:text-white transition-colors">JOIN NOW</a>
+            </div>
+            <button class="md:hidden text-white">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="py-32 border-b border-white/10 hero-gradient relative overflow-hidden">
+        <div class="absolute inset-0 opacity-20">
+            <div class="absolute top-1/4 left-1/4 w-64 h-64 rounded-full bg-blue-500 filter blur-3xl opacity-30"></div>
+            <div class="absolute bottom-1/4 right-1/4 w-64 h-64 rounded-full bg-purple-500 filter blur-3xl opacity-30"></div>
+        </div>
+        <div class="container mx-auto px-4 text-center relative z-10">
+            <h1 class="text-6xl md:text-8xl mb-6 leading-tight font-heading">SHAPE THE WORLD</h1>
+            <p class="text-xl md:text-2xl max-w-3xl mx-auto mb-10 opacity-90">A geopolitical Minecraft experience where nations rise, economies flourish, and history is written by you.</p>
+            <div class="flex flex-col md:flex-row justify-center gap-4">
+                <button class="bg-white text-black px-8 py-4 rounded-full font-medium glow-hover transition-all hover:bg-opacity-90 flex items-center justify-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-8.707l-3-3a1 1 0 00-1.414 0l-3 3a1 1 0 001.414 1.414L9 9.414V13a1 1 0 102 0V9.414l1.293 1.293a1 1 0 001.414-1.414z" clip-rule="evenodd" />
+                    </svg>
+                    JOIN SERVER
+                </button>
+                <a href="https://discord.gg/vkPzcXdpHU" class="border border-white px-8 py-4 rounded-full font-medium glow-hover transition-all hover:bg-white hover:bg-opacity-10 flex items-center justify-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd" />
+                    </svg>
+                    LEARN MORE
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Server Stats -->
+    <div class="bg-black/50 py-8 border-b border-white/10 backdrop-blur-sm">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+                <div class="p-4 rounded-lg bg-white/5 border border-white/10 hover:bg-white/10 transition-colors">
+                    <div class="text-4xl font-bold server-stats">30+</div>
+                    <div class="text-sm opacity-80 mt-1">ACTIVE NATIONS</div>
+                </div>
+                <div class="p-4 rounded-lg bg-white/5 border border-white/10 hover:bg-white/10 transition-colors">
+                    <div class="text-4xl font-bold server-stats">16+</div>
+                    <div class="text-sm opacity-80 mt-1">PLAYERS DAILY</div>
+                </div>
+                <div class="p-4 rounded-lg bg-white/5 border border-white/10 hover:bg-white/10 transition-colors">
+                    <div class="text-4xl font-bold server-stats">10+</div>
+                    <div class="text-sm opacity-80 mt-1">NEW PLAYERS WEEKLY</div>
+                </div>
+                <div class="p-4 rounded-lg bg-white/5 border border-white/10 hover:bg-white/10 transition-colors">
+                    <div class="text-4xl font-bold server-stats">20.00</div>
+                    <div class="text-sm opacity-80 mt-1">AVERAGE TPS</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 border-b border-white/10">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <span class="text-sm uppercase tracking-wider opacity-60">THE WORLD OF</span>
+                <h2 class="text-5xl mt-2 font-heading">IMPERIUM GEOPOLITICS</h2>
+                <div class="w-24 h-1 bg-white mx-auto mt-4"></div>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white/5 p-8 rounded-xl border border-white/10 feature-card transition-all duration-300">
+                    <div class="text-4xl mb-4 font-heading flex items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                        </svg>
+                        BUILDING
+                    </div>
+                    <p class="opacity-80">Expand your territory, grow your population, and develop a unique culture for your civilization. Claim land, build cities, and establish your sovereignty in our dynamic world.</p>
+                </div>
+                <div class="bg-white/5 p-8 rounded-xl border border-white/10 feature-card transition-all duration-300">
+                    <div class="text-4xl mb-4 font-heading flex items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                        ECONOMY
+                    </div>
+                    <p class="opacity-80">Feed your people, establish trade routes, and utilize the global marketplace. Manage resources carefully, negotiate fair deals, and ensure your nation's prosperity and future.</p>
+                </div>
+                <div class="bg-white/5 p-8 rounded-xl border border-white/10 feature-card transition-all duration-300">
+                    <div class="text-4xl mb-4 font-heading flex items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" />
+                        </svg>
+                        DIPLOMACY
+                    </div>
+                    <p class="opacity-80">Form alliances, declare wars, or maintain neutrality in our dynamic world where every decision has consequences. Participate in summits, negotiate peace treaties, and engage in espionage.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rules Section -->
+    <section id="rules" class="py-20 border-b border-white/10 bg-black/30">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <span class="text-sm uppercase tracking-wider opacity-60">SERVER GOVERNANCE</span>
+                <h2 class="text-5xl mt-2 font-heading">SERVER LAWS</h2>
+                <div class="w-24 h-1 bg-white mx-auto mt-4"></div>
+            </div>
+            <div class="max-w-3xl mx-auto">
+                <div class="mb-8 p-6 bg-white/5 rounded-lg border border-white/10 hover:bg-white/10 transition-colors">
+                    <div class="flex items-center mb-3">
+                        <div class="w-3 h-3 bg-purple-500 rounded-full mr-3"></div>
+                        <h3 class="text-2xl font-heading">MAINTAIN RESPECT</h3>
+                    </div>
+                    <p class="opacity-80 ml-6">All players must maintain respect for each other. Harassment or hate speech will result in permanent bans. Political conflict is encouraged but keep it in-character.</p>
+                </div>
+                <div class="mb-8 p-6 bg-white/5 rounded-lg border border-white/10 hover:bg-white/10 transition-colors">
+                    <div class="flex items-center mb-3">
+                        <div class="w-3 h-3 bg-blue-500 rounded-full mr-3"></div>
+                        <h3 class="text-2xl font-heading">BE APPROPRIATE</h3>
+                    </div>
+                    <p class="opacity-80 ml-6">Keep all content and discussions appropriate for all ages. This includes builds, chat messages, and any shared media.</p>
+                </div>
+                <div class="mb-8 p-6 bg-white/5 rounded-lg border border-white/10 hover:bg-white/10 transition-colors">
+                    <div class="flex items-center mb-3">
+                        <div class="w-3 h-3 bg-green-500 rounded-full mr-3"></div>
+                        <h3 class="text-2xl font-heading">NO GRIEFING</h3>
+                    </div>
+                    <p class="opacity-80 ml-6">Destruction of property without consent is strictly prohibited. Protected builds are marked and any violations will be punished by server administration.</p>
+                </div>
+                <div class="p-6 bg-white/5 rounded-lg border border-white/10 hover:bg-white/10 transition-colors">
+                    <div class="flex items-center mb-3">
+                        <div class="w-3 h-3 bg-yellow-500 rounded-full mr-3"></div>
+                        <h3 class="text-2xl font-heading">ENCOURAGE ROLEPLAY</h3>
+                    </div>
+                    <p class="opacity-80 ml-6">Immerse yourself in the geopolitical experience. Develop your nation's identity, engage in diplomacy, and contribute to the server's living history.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Join Section -->
+    <section id="join" class="py-24 join-section">
+        <div class="container mx-auto px-4">
+            <div class="max-w-2xl mx-auto text-center">
+                <h2 class="text-5xl mb-6 font-heading">JOIN IMPERIUM TODAY</h2>
+                <p class="text-xl mb-10 opacity-90">The world is waiting for your nation to make its mark. Will you build an empire, create a democracy, or forge a new path?</p>
+                <div class="bg-white/5 p-8 rounded-xl border border-white/10 ip-box backdrop-blur-sm">
+                    <div class="text-3xl font-heading mb-4 flex items-center justify-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                        </svg>
+                        SERVER IP
+                    </div>
+                    <div class="bg-black border border-white/20 p-4 rounded-lg mb-6 font-mono text-lg tracking-wider">IP Coming Soon</div>
+                    <a href="https://discord.gg/vkPzcXdpHU" class="bg-white text-black px-8 py-3 rounded-full font-medium glow-hover transition-all hover:bg-opacity-90 flex items-center mx-auto">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" viewBox="0 0 20 20" fill="currentColor">
+                            <path d="M8 3a1 1 0 011-1h2a1 1 0 110 2H9a1 1 0 01-1-1z" />
+                            <path d="M6 3a2 2 0 00-2 2v11a2 2 0 002 2h8a2 2 0 002-2V5a2 2 0 00-2-2 3 3 0 01-3 3H9a3 3 0 01-3-3z" />
+                        </svg>
+                        JOIN DISCORD
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Simplified Footer -->
+    <footer class="bg-black/80 py-12 border-t border-white/10 backdrop-blur-sm">
+        <div class="container mx-auto px-4 text-center">
+            <div class="text-3xl font-heading mb-2">
+                IMPERIUM
+            </div>
+            <div class="pt-8 border-t border-white/10 text-center opacity-50 text-sm">
+                NOT AFFILIATED WITH MOJANG OR MICROSOFT.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.querySelector('.md\\:hidden');
+        const navLinks = document.querySelector('.hidden.md\\:flex');
+        
+        mobileMenuButton.addEventListener('click', function() {
+            navLinks.classList.toggle('hidden');
+            navLinks.classList.toggle('flex');
+            navLinks.classList.toggle('flex-col');
+            navLinks.classList.toggle('absolute');
+            navLinks.classList.toggle('top-16');
+            navLinks.classList.toggle('left-0');
+            navLinks.classList.toggle('right-0');
+            navLinks.classList.toggle('bg-black');
+            navLinks.classList.toggle('p-4');
+            navLinks.classList.toggle('space-y-4');
+            navLinks.classList.toggle('space-x-8');
+            navLinks.classList.toggle('border-t');
+            navLinks.classList.toggle('border-white/10');
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
